@@ -10,12 +10,13 @@ for (let i = 0; i < gridSize; i++) {
         let square = document.createElement('div');
         square.classList.add('square');
         square.style.cssText = "flex-basis: " + (container.offsetWidth / gridSize);
+        square.addEventListener("mouseenter", (e) => {
+            e.target.style.cssText = "background-color: black;";
+        });
         row.appendChild(square);
     }
     rows.appendChild(row);
 }
 
-
 container.appendChild(rows);
-
 
